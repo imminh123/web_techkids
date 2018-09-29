@@ -1,0 +1,29 @@
+.menu
+{
+    background-color: #D5B0AC;
+    color:  #402E2A;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.item
+{
+    width: 100px;
+    height: 30px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.item:hover
+{
+    background-color: #9CD08F;
+    color: #ffffff;
+}
+
+.menu_vertical
+{
+    margin-top: 20px;
+    display: inline-block;
+}
+
