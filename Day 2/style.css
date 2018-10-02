@@ -5,25 +5,56 @@
     font-weight: bold;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
-.item
+
+.menu span
+{
+    color: inherit;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* .item
 {
     width: 100px;
     height: 30px;
     padding-top: 10px;
     text-align: center;
+} */
+.menu .sub-menu 
+{
+    display: none;
+    position: absolute;
 }
 
-.item:hover
+.sub-menu .sub-menu
+{
+    left: 100px;
+    top: 0; 
+}
+.menu span:hover > .sub-menu
+{
+    display: block;
+    
+}
+.menu span:hover
 {
     background-color: #9CD08F;
     color: #ffffff;
 }
 
+
 .menu_vertical
 {
     margin-top: 20px;
     display: inline-block;
+    text-align: center;
 }
 

@@ -1,0 +1,37 @@
+body
+{
+    font-weight: bold;
+}
+
+.header {
+    background-color: #0000ff;
+    text-align: center;
+    font-size: 15.5px;
+
+}
+
+.nav {
+    background-color: #800080;
+    text-align: center;
+}
+
+.nav a
+{
+    color: blue;
+}
+
+.main {
+    background-color: #ffd700;
+    max-width: 1000px;
+    float: left;
+}
+
+.aside {
+    background-color: #808080;
+    height: 400px;
+}
+
+.footer {
+    background-color: #00ffff;
+    display: inline-block;
+}
