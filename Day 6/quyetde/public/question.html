@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>\
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+        <nav>
+                <ul>
+                    <li><a href="/ask">Hỏi nè</a></li>
+                    <li><a href="/answer">Đáp nè</a></li>
+                </ul>
+        </nav>
+    <div>
+        <h1 id="questionContent"></h1>
+        <p>Yes: <span id="yes"></span></p>
+        <p>No: <span id="no"></span></p>
+        <button id="otherQuestion"><a href="/answer">Xem câu hỏi khác</a></button>
+    </div>
+
+    <script src="./question.js"></script>
+</body>
+</html>
