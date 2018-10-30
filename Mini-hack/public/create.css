@@ -1,0 +1,10 @@
+.form-control{
+    background-color: #FBFEF9;
+    border-color: #BF1363;
+    color: #333333;
+    margin-bottom: 15px;
+}
+.btn{
+    background-color: #BF1363;
+    color:  #FBFEF9;
+}
