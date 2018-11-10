@@ -9,10 +9,19 @@ CommentRouter.use('/', (req,res, next) => {
 });
 
 CommentRouter.get('/', (req,res)=>{
-    CommentModel.find({}, (err, commentFound)=>{
-        if(err) console.log(err);
-        else res.status(200).json({success: 1, comment: commentFound})
-    });
+    // CommentModel.find({}, (err, commentFound)=>{
+    //     if(err) console.log(err);
+    //     else res.status(200).json({success: 1, comment: commentFound})
+    // });
+
+    CommentModel.find({})
+        .populate("user")
+        .then(commentFound => {
+            res.status(200).json({success: 1, comment: commentFound})
+        })
+        .catch(err => {
+            console.log(err);
+        })
 });
 
 CommentRouter.post('/', (req,res) => {

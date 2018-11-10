@@ -7,18 +7,21 @@ const ImageModel = require('../models/imageModel');
 ImageRouter.use((req,res, next) => {
     console.log("User middleware");
     next();
-});
+}); 
 
 ImageRouter.get('/', (req,res) => {
-    ImageModel.find({}, (err, image) => {
-        if(err) res.status(500).json({success: 0, error: err})
-        else res.status(201).json({success: 1, image: image})
-    });
+    ImageModel.find({})
+        .populate("user", "name avatar")
+        .populate("comments")
+        .exec((err, image) => {
+            if(err) res.status(500).json({success: 0, error: err})
+            else res.status(201).json({success: 1, image: image})
+        });
 });
 
 ImageRouter.post('/', (req,res) => {
-    const {user, view , like, url, caption, title, comments} = req.body;
-    ImageModel.create({user, view , like, url, caption, title, comments}, (err, imageCreated) => {
+    const {user, url, caption, title} = req.body;
+    ImageModel.create({user, url, caption, title}, (err, imageCreated) => {
         if(err) res.status(500).json({success : 0, message: err})
         else res.status(201).json({success: 1, iamge: imageCreated})
     });
